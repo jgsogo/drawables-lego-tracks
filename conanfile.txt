@@ -1,4 +1,5 @@
 [requires]
+drawables/v0.1.0@jgsogo/stable
 catch2/2.13.7
 
 [generators]
