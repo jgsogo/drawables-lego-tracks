@@ -4,6 +4,9 @@ project(drawables-lego-tracks
         VERSION 0.1.0
         DESCRIPTION "Library of drawables with LEGO tracks")
 
+include(${CMAKE_BINARY_DIR}/conanbuildinfo.cmake)
+conan_basic_setup(TARGETS)
+
 set(CMAKE_CXX_STANDARD 20)
 
 add_subdirectory(src)
