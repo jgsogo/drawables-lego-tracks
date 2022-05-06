@@ -53,14 +53,14 @@ jobs:
           conan lock create --name=${{ github.event.repository.name }} --version=0.1.0 --base --lockfile-out lockfile.json --build --profile:host=.conan/profiles/cpp20 --profile:build=default conanfile.txt
           git diff
 
-      - uses: tibdex/github-app-token@7ce9ffdcdeb2ba82b01b51d6584a6a85872336d4
+      - uses: tibdex/github-app-token@586e1a624db6a5a4ac2c53daeeded60c5e3d50fe  # release v1.5.2
         id: generate-token
         with:
           app_id: ${{ secrets.APP_RECIPES_APP_ID }}
           private_key: ${{ secrets.APP_RECIPES_PRIVATE_KEY }}
 
       - name: Create pull request
-        uses: peter-evans/create-pull-request@dcd5fd746d53dd8de555c0f10bca6c35628be47a
+        uses: peter-evans/create-pull-request@bd72e1b7922d417764d27d30768117ad7da78a0e # release v4.0.2
         with:
           path: /home/conan/library
           commit-message: "Update lockfile"
