@@ -1,5 +1,6 @@
 cmake_minimum_required(VERSION 3.15)
 
+find_package(drawables REQUIRED)
 
 add_library(${PROJECT_NAME} INTERFACE)  # TODO: Change to proper library and add your files
 set_target_properties(${PROJECT_NAME} PROPERTIES
